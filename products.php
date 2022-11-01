@@ -52,7 +52,7 @@
 				echo "<header id='breadcrumb' style='background-color: rgb(180, 229, 158)'>";
 				echo "<input type='button' id='prev' onclick='history.back();' value='Назад'>";
 				echo "<ul class='breadcrumb' style='display: inline-block'>";
-				//echo "<li><a href='products.php'>Главная</a></li>";
+				echo "<li><a href='index.html'>Главная</a></li>";
 				echo "<li><a href='products.php'>Категории</a></li>";
 				$result = $conn->prepare($sqlGetSection);
 				$result->execute();
@@ -83,10 +83,7 @@
 				//if($result = $conn->query($sqlGetSection)){
 					foreach($result as $row){
 						$date = date('m/d/Y', time());
-						echo "<div id='testCard'>
-							<p id='rightPos'>$date</p><p><b>" . $row["name"] . "</b></p>
-							<p>". $row["details"] . "</p>
-						</div><br><br>";
+						echo "<div id='testCard'><p id='rightPos'>$date<br><br><b>" . $row["name"] . "</b><br><br>". $row["details"] . "</div><br><br>";
 					}
 				//}
 				//$result->free();
@@ -140,7 +137,7 @@
 				echo "<header id='breadcrumb' style='background-color: rgb(180, 229, 158)'>";
 				echo "<input type='button' id='prev' onclick='history.back();' value='Назад'>";
 				echo "<ul class='breadcrumb' style='display: inline-block'>";
-				//echo "<li><a href='products.php'>Главная</a></li>";
+				echo "<li><a href='index.html'>Главная</a></li>";
 				echo "<li><a href='products.php'>Категории</a></li>";
 				if(isset($_COOKIE["category"]) and isset($_COOKIE["category_id"])) {
 					echo "<li><a href='products.php?cat_id=" . $_COOKIE["category_id"] . "&page_num=0'>" . $_COOKIE["category"] . "</a></li>";
@@ -267,7 +264,7 @@
 				$sqlGetAllSections = "SELECT section.id, section.name, section.details, count(*) AS goods_amount FROM goods INNER JOIN section ON goods.main_section_id = section.id INNER JOIN sections_list ON goods.sections_id = sections_list.product_id GROUP BY goods.main_section_id ORDER BY goods_amount DESC;";
 				echo "<header id='breadcrumb' style='background-color: rgb(180, 229, 158)'>";
 				echo "<ul class='breadcrumb' style='display: inline-block'>";
-				//echo "<li><a href='products.php'>Главная</a></li>";
+				echo "<li><a href='index.html'>Главная</a></li>";
 				echo "<li>Категории</li>";
 				echo "</ul></header>";
 				echo "<h1 id='header'>Категории товаров</h1>";

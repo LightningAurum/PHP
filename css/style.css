@@ -65,13 +65,16 @@ ul.breadcrumb:last-child {
 }
 
 #testCard {
+	display: inline-block;
 	border-width: 5px;
 	border-style: solid;
 	border-color: rgb(74, 142, 168);
 	background: rgb(220, 232, 238);
 	font-size: 20pt;
-	width: 350px;
-	height: 200px;
+	/*width: 350px;*/
+	/*height: 200px;*/
+	width: auto;
+	height: auto;
 	border-radius: 10px;
 	padding-bottom: 40px;
 	padding-left: 10px;
@@ -110,6 +113,7 @@ ul.breadcrumb:last-child {
 	border: none;
 	height: 25px;
     width: 25px;
+	text-align: center;
 }
 
 .desc {
