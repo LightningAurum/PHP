@@ -1,0 +1,194 @@
+@font-face {
+    font-family: "Circe Regular";
+    src: url(../fonts/CirceRegular.ttf) format("truetype");
+}
+
+#productBody {
+	font-family: "Circe Regular";
+	background: rgb(255, 255, 255);
+}
+
+#productH1 {
+	text-transform: uppercase;
+}
+
+.productBox {
+	display: flex;
+	justify-content: space-between;
+	width: 1400px;
+}
+
+.slider {
+	margin-top: 10px;
+	text-align: center;
+}
+
+#slide {
+	background: rgb(238, 238, 238);
+	border: none;
+	font-size: 20pt;
+	width: 60px;
+	height: 40px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.minP {
+	padding: 15px;
+	width: 100px;
+	height: auto;
+}
+
+.shops {
+	margin-top: 30px;
+	background: rgb(238, 238, 238);
+	width: 65%;
+}
+
+.productA {
+	color: rgb(85, 156, 238);
+	cursor: pointer;
+}
+
+.productButtons {
+	margin-top: 30px;
+	padding-right: 10px;
+}
+
+.productButton {
+	width: 170px;
+	height: 40px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+#firstB {
+	color: rgb(255, 255, 255);
+	border: none;
+	background: rgb(0, 107, 229);
+	margin-right: 10px;
+}
+
+#secondB {
+	background: rgb(255, 255, 255);
+	border-color: rgb(238, 238, 238);
+	border-style: solid;
+}
+
+.tegs {
+	margin-top: 10px;
+}
+
+.prices {
+	margin-top: 10px;
+	font-size: 1.5em;
+	margin-top: 60px;
+}
+
+.price {
+	display: inline;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.price:not(:last-child):after {
+	content: "₽";
+	padding-left: 7px;
+	padding-right: 10px;
+}
+
+#promo {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+#price-old {
+	text-decoration: line-through;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+#price-promo {
+	color: rgba(0, 0, 0, 1);
+	padding-left: 20px;
+}
+
+.link {
+	cursor: pointer;
+}
+
+.list li {
+	list-style-type: none;
+	display: inline;
+	padding-right: 20px;
+	cursor: pointer;
+}
+
+.list {
+	padding: 0;
+	display: inline;
+}
+
+p {
+	color: rgba(0, 0, 0, 0.7);
+}
+
+#oneLine {
+	display: inline
+}
+
+.shops {
+	margin-top: 20px;
+	padding-top: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 5px;
+}
+
+#count {
+	display: inline-block;
+	border: none;
+	background: rgb(238, 238, 238);
+	width: 40px;
+	height: 30px;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 30px;
+	position: relative;
+}
+#count::before {
+	content: ''; 
+	position: absolute;
+	right: 40px;
+	top: 10px;
+	border: 5px solid transparent;
+	border-right: 7px solid rgb(238, 238, 238);
+}
+
+.social-icons {
+	display: flex;
+	justify-content: space-between;
+	width: 400px;
+	margin-top: 40px;
+	align-items: center;
+}
+
+.details {
+	margin-top: 40px;
+}
+
+.eding {
+	margin-top: 30px;
+}
+
+input[type="button"] {
+	background: rgb(255, 255, 255);
+	border-color: rgb(238, 238, 238);
+	border-style: solid;
+	cursor: pointer;
+}
+
+input[type="text"] {
+	border-color: rgb(238, 238, 238);
+	border-style: solid;
+	width: 25px;
+	/*width: auto;*/
+	text-align: center;
+}

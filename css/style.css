@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "Circe Regular";
+    src: url(../fonts/CirceRegular.ttf) format("truetype");
+}
+body {
+	background: rgb(238, 238, 238);
+	font-family: "Circe Regular";
+}
+
+ul.breadcrumb {
+	padding: 10px 16px;
+	list-style: none;
+	background-color: rgb(238, 238, 238);
+}
+
+ul.breadcrumb li {
+	display: inline;
+	font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+	padding: 8px;
+	color: black;
+	content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+	color: #0275d8;
+	text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+	color: #01447e;
+	text-decoration: underline;
+}
+
+ul.breadcrumb:last-child {
+	color: #000000;
+}
+
+.cardP {
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: 'Raleway', sans-serif;
+	box-shadow: 2px 2px 10px -2px rgb(50, 50, 50);
+	margin-top: 0em;
+	margin-bottom: 0em;
+	/*white-space: nowrap;*/
+	overflow: hidden;
+	padding: 10px;
+	text-overflow: ellipsis;
+	font-family: 'Raleway', sans-serif;
+}
+
+.picturePrev {
+	/*display: flex;
+	flex: 1 1 auto;*/
+	margin: 10px;
+	/*margin: 0 10px;*/
+	width: 220px;
+	height: 220px;
+	background-color: rgb(255, 255, 255);
+	/*padding-bottom: 0px;*/
+}
+
+#testCard {
+	border-width: 5px;
+	border-style: solid;
+	border-color: rgb(74, 142, 168);
+	background: rgb(220, 232, 238);
+	font-size: 20pt;
+	width: 350px;
+	height: 200px;
+	border-radius: 10px;
+	padding-bottom: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: "Circe Regular";
+}
+
+.box {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 1500px;
+}
+
+.pages {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100px;
+	border: 2px solid darkolivegreen;
+	border-radius: 10px;
+	font-size: 16pt;
+}
+
+.pageNum {
+	/*background-color: aquamarine;*/
+	background-color: rgb(180, 229, 158);
+	border-width: 1px;
+	border-radius: 20px;
+	border-style: solid;
+	border: none;
+	height: 25px;
+    width: 25px;
+}
+
+.desc {
+	background-color: #3366CC;
+	color: rgb(255, 255, 255);
+	height: 20px;
+	overflow: hidden;
+}

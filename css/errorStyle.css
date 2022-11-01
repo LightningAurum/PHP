@@ -1,0 +1,52 @@
+body {
+	background: rgb(238, 238, 238);
+}
+
+.box {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 900px;
+	border: 1rem solid;
+	border-color: cornflowerblue;
+	border-radius: 20px;
+    vertical-align: middle;
+	top:  50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: aliceblue;
+}
+
+h1 {
+	font-size: 3em;
+	text-align: center;
+}
+
+.errorText {
+	font-size: 2em;
+	text-align: center;
+	/*text-align: end;*/
+}
+
+#code {
+	color: cadetblue;
+	font-size: 2.6em;
+}
+
+a {
+	color: darkcyan;
+}
+
+a:hover {
+	color: cyan;
+}
+
+a:visited{
+	color: darkslateblue;
+}
+
+a:active {
+	color: dodgerblue;
+}
