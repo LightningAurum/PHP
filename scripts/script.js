@@ -48,11 +48,14 @@ window.onload = function() {
 		}
 	}
 	document.getElementById('prev').onclick = function() {
-		let loc = window.location.href;
 		var num = '<?php echo $mainSectionID;?>';
-		if(strpos($url,'cat_id') == true)
-			window.location.href = "products.php";
-		else
-			window.location.href = "products.php?cat_id=" + num + "";
+		if(window.location.href.indexOf("cat_id") > -1) {
+			window.location.href = "products.php"; //почему-то не осуществляется переход
+			//alert('Yes');
+	 	}
+		else {
+			window.location.href = "products.php?cat_id=" + num + "&page_num=0";
+			alert(num); //почему-то переменная не передаётся
+		}
 	};
 }
