@@ -47,18 +47,12 @@ window.onload = function() {
 			document.querySelectorAll('input[type=text]')[0].value = 0;
 		}
 	}
-}
-
-function goBack(category_id) {
-	document
-}
-
-function addNewElement(header) {
-	//const newNode = document.createTextNode("New");
-	const newNode = document.createTextNode(header);
-	//document.querySelector(".breadcrumb").append($newNode);
-	//document.querySelector(".breadcrumb");
-	document.querySelector(".breadcrumb").insertAdjacentHTML('beforeend', '<li>' + newNode + '</li>');
-	//function showMessage(from, text) { // аргументы: from, text
-	//	alert(from + ': ' + text);
+	document.getElementById('prev').onclick = function() {
+		let loc = window.location.href;
+		var num = '<?php echo $mainSectionID;?>';
+		if(strpos($url,'cat_id') == true)
+			window.location.href = "products.php";
+		else
+			window.location.href = "products.php?cat_id=" + num + "";
+	};
 }

@@ -54,14 +54,10 @@ ul.breadcrumb:last-child {
 }
 
 .picturePrev {
-	/*display: flex;
-	flex: 1 1 auto;*/
 	margin: 10px;
-	/*margin: 0 10px;*/
 	width: 220px;
 	height: 220px;
 	background-color: rgb(255, 255, 255);
-	/*padding-bottom: 0px;*/
 }
 
 #testCard {
@@ -71,8 +67,6 @@ ul.breadcrumb:last-child {
 	border-color: rgb(74, 142, 168);
 	background: rgb(220, 232, 238);
 	font-size: 20pt;
-	/*width: 350px;*/
-	/*height: 200px;*/
 	width: auto;
 	height: auto;
 	border-radius: 10px;
@@ -105,7 +99,6 @@ ul.breadcrumb:last-child {
 }
 
 .pageNum {
-	/*background-color: aquamarine;*/
 	background-color: rgb(180, 229, 158);
 	border-width: 1px;
 	border-radius: 20px;

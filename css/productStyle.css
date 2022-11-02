@@ -189,6 +189,5 @@ input[type="text"] {
 	border-color: rgb(238, 238, 238);
 	border-style: solid;
 	width: 25px;
-	/*width: auto;*/
 	text-align: center;
 }
