@@ -70,10 +70,24 @@
 					$date = date('m/d/Y', time());
 					echo "<div id='testCard'><p id='rightPos'>$date<br><br><b>" . $row["name"] . "</b><br><br>". $row["details"] . "</div><br><br>";
 				}
+				$getGoodsInfo = "SELECT goods.id, goods.header, image.path, image.alt, section.name AS main_section_name FROM goods LEFT JOIN image ON goods.picture_id = image.id LEFT JOIN section ON goods.main_section_id = section.id WHERE goods.main_section_id = '$cat' AND goods.product_activity = true UNION SELECT goods.id, goods.header, image.path, image.alt, (SELECT section.name FROM section WHERE goods.main_section_id = section.id) AS main_section_name FROM goods LEFT JOIN image ON goods.picture_id = image.id INNER JOIN sections_list ON goods.sections_id = sections_list.product_id LEFT JOIN section ON sections_list.section_id = section.id WHERE sections_list.section_id = '$cat' AND goods.product_activity = true LIMIT $lastProduct, 12;";
 				$result = $conn->prepare($getGoodsInfo);
+				//$result->execute(array('cat' => $cat, 'cat' => $cat, 'lastProduct' => $lastProduct));
+				$result->execute();
+
+				//$conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
+				//$result = $conn->prepare($getGoodsInfo);
+				//$result->real_escape_string($lastProduct)
 				//$params = ['cat' => $cat, 'cat' => $cat, 'lastProduct' => $lastProduct];
-				$result->execute(array('$cat', '$cat', $lastProduct));
 				//$result->execute($params);
+
+				//$params = ['cat' => $cat, 'cat' => $cat, ':lastProduct', "%$lastProduct%"];
+				//$result->execute(array('cat' => $cat, 'lastProduct' => $lastProduct));
+
+				//$result->bindParam(1, $cat, PDO::PARAM_STR);
+				//$result->bindParam(2, $cat, PDO::PARAM_STR);
+				//$result->bindParam(3, $lastProduct, PDO::PARAM_INT);
+				//$result->execute(array($cat, $cat, $lastProduct));
 		?>
 				<div class='box'>
 		<?php
