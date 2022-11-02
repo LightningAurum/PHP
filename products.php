@@ -44,8 +44,7 @@
 				LIMIT $lastProduct, 12;";
 				echo "<header id='breadcrumb' style='background-color: rgb(180, 229, 158)'>";
 				$link = "products.php";
-				//echo "<input type='button' id='prev' onclick='location.href = $link' value='Назад'>";
-				echo "<input type='button' id='prev' value='Назад'>";
+				echo "<input id='prev' type='button' value='Назад' name='back' style='cursor: pointer;'>";
 				echo "<ul class='breadcrumb' style='display: inline-block'>";
 				echo "<li><a href='index.html'>Главная</a></li>";
 				echo "<li><a href='products.php'>Категории</a></li>";
@@ -123,8 +122,7 @@
 					}
 				}
 				echo "<header id='breadcrumb' style='background-color: rgb(180, 229, 158)'>";
-				echo "<input type='button' id='prev' value='Назад'>";
-				//echo "<input type='button' id='prev' onclick='goToPage($mainSectionID);' value='Назад'>";
+				echo "<input id='prev' type='button' value='Назад' name='back' style='cursor: pointer;'>";
 				echo "<ul class='breadcrumb' style='display: inline-block'>";
 				echo "<li><a href='index.html'>Главная</a></li>";
 				echo "<li><a href='products.php'>Категории</a></li>";
