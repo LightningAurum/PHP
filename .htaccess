@@ -1,12 +1,6 @@
 AuthType Basic
-AuthName "You need a password to access the site."
-AuthUserFile C:/xampp/htdocs/fol/.htpasswd
-Require valid-user
 ErrorDocument 404 /error.html
 php_flag session.use_trans_sid Off
-<Files .htpasswd>
-   allow from all
-</Files>
 <IfModule php5_module>
    php_flag session.cookie_httponly on
 </IfModule>
